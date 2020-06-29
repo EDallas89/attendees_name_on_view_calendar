@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <record id="attendees_name_on_view_calendar" model="ir.ui.view">
+      <field name="name">attendees_name_on_view_calendar</field>
+      <field name="model">calendar.event</field>
+      <field name="inherit_id" ref="calendar.view_calendar_event_calendar" />
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='partner_ids']" position="replace">
+          <field name="partner_name" />
+        </xpath>
+      </field>
+    </record>
+  </data>
+</odoo>
